@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>todos os produtos</title>
+</head>
+<body>
+    <table>
+        <tr><td>nome</td><td>urlFoto</td><td>foto</td></tr>
+        <% todosOsProdutos.forEach(produto=>{%>
+           <tr>
+               <td><%=produto.nome%></td>
+               <td><%=produto.urlFoto%></td>
+               <td><img width="50px" src="/<%=produto.urlFoto%>"></td>
+           </tr>
+            <%})%>
+    </table>
+    <a href="/cadastrar"><button>Novo Cadastro</button></a>
+</body>
+</html>
